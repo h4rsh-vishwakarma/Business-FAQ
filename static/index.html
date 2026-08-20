@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BistroBot Demo</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="hero">
+    <section class="hero-copy">
+      <p class="eyebrow">AI Customer Support + Lead Capture</p>
+      <h1>Maple & Thyme Bistro</h1>
+      <p class="lede">
+        This demo shows how a restaurant can answer repetitive questions, capture booking and catering leads,
+        and stay responsive even outside service hours.
+      </p>
+      <div class="feature-grid">
+        <article>
+          <h2>Answers FAQs</h2>
+          <p>Hours, reservations, menu preferences, parking, catering, and location details.</p>
+        </article>
+        <article>
+          <h2>Captures Leads</h2>
+          <p>When someone wants a booking or callback, the bot collects contact details and stores them.</p>
+        </article>
+        <article>
+          <h2>Embeddable</h2>
+          <p>Use a single script tag to drop the widget into a business website.</p>
+        </article>
+      </div>
+      <div class="embed-snippet">
+        <span>Embed snippet</span>
+        <code>&lt;script src="/api/embed.js" defer&gt;&lt;/script&gt;</code>
+      </div>
+    </section>
+    <section class="hero-panel">
+      <div class="mock-card">
+        <p>Try the chat widget in the bottom-right corner.</p>
+        <ul>
+          <li>Ask: "What are your hours?"</li>
+          <li>Ask: "I want to book a table for Friday"</li>
+          <li>Ask: "Do you offer catering?"</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    window.BusinessFAQChatbotConfig = {
+      apiBaseUrl: window.location.origin,
+      title: "Maple & Thyme Bistro",
+      subtitle: "Restaurant support and booking capture"
+    };
+  </script>
+  <script src="/api/embed.js" defer></script>
+</body>
+</html>

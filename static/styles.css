@@ -1,0 +1,170 @@
+:root {
+  --cream: #f7f1e4;
+  --sand: #ead9b8;
+  --ink: #1f1d1b;
+  --olive: #2e5e4e;
+  --clay: #b45d3d;
+  --stone: #6f6a63;
+  --white: #fffdf8;
+  --shadow: 0 20px 60px rgba(31, 29, 27, 0.18);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(234, 217, 184, 0.75), transparent 36%),
+    linear-gradient(135deg, #f4ecdd, #fcf8ef 55%, #efe2c9);
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 48px 24px 120px;
+  display: grid;
+  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  align-items: center;
+}
+
+.hero-copy,
+.mock-card,
+.admin-shell {
+  background: rgba(255, 253, 248, 0.8);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(46, 94, 78, 0.15);
+  box-shadow: var(--shadow);
+}
+
+.hero-copy {
+  padding: 36px;
+  border-radius: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--olive);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: 0.95;
+}
+
+.lede {
+  max-width: 42rem;
+  font-size: 1.1rem;
+  color: var(--stone);
+}
+
+.feature-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-top: 28px;
+}
+
+.feature-grid article,
+.embed-snippet,
+.mock-card {
+  border-radius: 18px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.feature-grid h2,
+.mock-card p {
+  margin-top: 0;
+}
+
+.embed-snippet {
+  margin-top: 28px;
+}
+
+.embed-snippet code {
+  display: block;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #1f1d1b;
+  color: var(--cream);
+  overflow-wrap: anywhere;
+}
+
+.mock-card {
+  max-width: 420px;
+  justify-self: center;
+}
+
+.mock-card ul {
+  margin-bottom: 0;
+  padding-left: 18px;
+}
+
+.admin-body {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+.admin-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+}
+
+.refresh-btn {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  color: var(--white);
+  background: var(--olive);
+  cursor: pointer;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(46, 94, 78, 0.14);
+}
+
+th {
+  color: var(--olive);
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 20px 16px 120px;
+  }
+
+  .hero-copy,
+  .admin-shell {
+    padding: 20px;
+  }
+}

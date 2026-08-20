@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Dashboard</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body class="admin-body">
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">Admin View</p>
+        <h1>Captured Leads</h1>
+      </div>
+      <button id="refresh-btn" class="refresh-btn">Refresh</button>
+    </header>
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Type</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody id="leads-table-body">
+          <tr>
+            <td colspan="4">Loading leads...</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/static/admin.js" defer></script>
+</body>
+</html>

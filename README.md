@@ -109,6 +109,22 @@ For a simple install on any site:
 
 ## Deployment notes
 
+### Hugging Face Spaces (free, no card required)
+
+This repo already includes a `Dockerfile` that works for Spaces. Steps:
+
+1. Go to https://huggingface.co/new-space, pick **Docker** as the SDK, and create the Space (free tier — no payment info needed).
+2. Locally, add the Space as a second git remote and push this repo to it:
+   ```bash
+   git remote add space https://huggingface.co/spaces/<your-username>/<space-name>
+   git push space main
+   ```
+3. On the Space's git repo, copy `huggingface-space-readme.md` over its `README.md` (the YAML frontmatter at the top is what tells Spaces to use Docker mode and port 7860) — either edit it in the Space's "Files" tab or push it as a follow-up commit on that remote.
+4. In the Space's **Settings → Variables and secrets**, set `ADMIN_USERNAME` / `ADMIN_PASSWORD` (don't leave the `admin`/`admin123` defaults) and optionally `CORS_ORIGINS`.
+5. The build starts automatically. Your app will be live at `https://<your-username>-<space-name>.hf.space`.
+
+Note: free Spaces restart occasionally and don't guarantee persistent disk, so `chatbot.db` (leads/chat logs) can reset — fine for a demo, but move to a real Postgres add-on before relying on it for real lead data.
+
 ### Render backend
 
 Build command:
